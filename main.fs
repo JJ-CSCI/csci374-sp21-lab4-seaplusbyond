@@ -2,13 +2,14 @@ module Assignment
 
 // Problem 1
 let rec prod (lst:int list) =
-    // write your solution here
-    0
+    if List.isEmpty lst then 1
+    else List.head lst * prod (List.tail lst)
 
 // Problem 2
-let rec map f (lst:int list) =
+let rec map f (lst:int list ) =
     // write your solution here
-    []
+    if List.isEmpty lst then []
+    else List.head lst :: map f (List.tail lst) //getting an error, saying the function isn't getting the expected type.
 
 // Problem 3
 let rec odd (lst:int list) =
